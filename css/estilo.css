@@ -1,0 +1,131 @@
+:root{
+    --color-de-elementos: rgb(16, 112, 180);
+    --tipo-de-letra:'Playfair Display', serif;
+
+    --colorfondo_oscuro:#000;
+    --colorletra_oscuro:#ffff;
+
+    --colormenu_oscuro:#000;
+    --colorletramenu_oscuro:#fff;
+}
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background-image: url(/imajenes/y-so-serious-white.png);
+    font-family: var(--tipo-de-letra);
+}
+
+
+
+section{
+    padding-top: 15px;
+    width:95%;
+    margin: auto;
+    text-align: justify;
+    margin-top: 5px;
+    
+}
+
+p{
+    margin: 16px 0;
+    line-height: 150%;
+}
+
+
+header{
+    width: 100%;
+    height: 350px;
+    background-image: url("/imajenes/sky-1281701_1920.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.placa{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 150px;
+    background-color: rgba(95, 162, 218, 0.397);
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    margin: 20px 0 auto;
+}
+
+.texto{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    top: 100px;
+    background-color:var(--color-de-elementos);
+    text-shadow: 5px 5px 20px cornsilk;
+    }
+
+
+.otro{
+    font-size: 45px;
+    color: #fff;
+    margin: 40px auto;
+}
+
+.subir{
+    width: 90px;
+    height: 55px;
+    background-color: #93b5c6;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 55px;
+    right: 15px;
+    z-index: 101;
+    transition: all 0.5s;
+}
+
+
+.subir span{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    text-shadow: 0 0 5px #000;
+}
+
+.sol, .luna{
+    text-align: center;
+    cursor: pointer;
+}
+.sol{
+    display: none;
+}
+body.dark-mode{
+    background-color: var(--colorfondo_oscuro);
+    color: var(--colorletra_oscuro);
+    background-image: none;
+
+}
+body.dark-mode .luna{
+    display: none;
+
+}
+body.dark-mode .sol{
+    display: block;
+}
+body.dark-mode nav{
+    background-color: var(--colormenu_oscuro);
+    color: var(--colorletramenu_oscuro);
+}
+

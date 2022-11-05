@@ -1,0 +1,245 @@
+:root{
+    --tipo-de-letra-en-tarjeta: 'Courier New', Courier, monospace;
+    --ancho-de-box:350px;
+    --alto-de-box:410px;
+   
+        --color-de-elementos: rgb(16, 112, 180);
+        --tipo-de-letra:'Playfair Display', serif;
+    
+        --colorfondo_oscuro:#000;
+        --colorletra_oscuro:#ffff;
+    
+        --colormenu_oscuro:#000;
+        --colorletramenu_oscuro:#fff;
+
+    
+    
+}
+
+
+body{
+    background-image: url(/imajenes/y-so-serious-white.png);
+     font-family: var(--tipo-de-letra);
+ } 
+section{
+        padding-top: 15px;
+        width:95%;
+        margin: auto;
+        text-align: justify;
+        margin-top: 5px;
+        
+}
+
+.contenedor{
+    margin-top: 100px;
+    width: 100%;
+    height: 500px;
+
+}
+.tarjetas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-family: var(--tipo-de-letra-en-tarjeta);
+
+}
+
+.box{
+   position: relative;
+   width:var(--ancho-de-box);
+   height:var(--alto-de-box);
+   margin: 20px;
+}
+.box .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 1s;
+
+}
+.box .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box h1{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color:#fff;
+    text-align: center;
+    font-weight: 100;
+    font-size: 25px;
+    background: rgba(27,27,27,0.6);
+    font-family: var(--tipo-de-letra);
+   
+
+}
+.box .front{
+    transform: perspective(500px)rotateY(0deg);
+    box-shadow: 0,5px,10px, #000;
+}
+.box .back{
+    transform: perspective(500px)rotateY(180deg);
+    background: rgb(33, 48, 58);
+    padding: 15px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0,5px,10px,#000;
+ }
+ .box .back h1{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color:#fff;
+    text-align: center;
+    font-weight: 100;
+    font-size: 25px;
+    background: rgba(27,27,27,0.6);
+    font-family: var(--tipo-de-letra);
+
+ }
+
+.box:hover .front{
+    transform: perspective(500px)rotateY(180deg);
+    box-shadow: 0 0 5px rgba(0,0,0,0.7);
+   
+    
+}
+.box:hover .back{
+    transform: perspective(500px)rotateY(360deg);
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+   
+    
+}
+
+.subir{
+    width: 90px;
+    height: 55px;
+    background-color: #93b5c6;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 55px;
+    right: 15px;
+    z-index: 101;
+    transition: all 0.5s;
+}
+
+
+.subir span{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    text-shadow: 0 0 5px #000;
+}
+
+.sol, .luna{
+    text-align: center;
+    cursor: pointer;
+}
+.sol{
+    display: none;
+}
+body.dark-mode{
+    background-color: var(--colorfondo_oscuro);
+    color: var(--colorletra_oscuro);
+    background-image: none;
+
+}
+body.dark-mode .luna{
+    display: none;
+
+}
+body.dark-mode .sol{
+    display: block;
+}
+body.dark-mode nav{
+    background-color: var(--colormenu_oscuro);
+    color: var(--colorletramenu_oscuro);
+    
+}
+
+nav{
+    width: 100%;
+    background-color: rgba(4, 140, 244, 0.759);
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+
+}
+
+  ul {
+    display: flex;
+  }
+  ul li {
+    list-style: none;
+  }
+  ul li a {
+    position: relative;
+    display: block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #262626;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.5s;
+    z-index: 1;
+    background-color:var(--colormenu);
+  }
+  ul li a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #262626;
+    border-bottom: 2px solid #262626;
+    transform: scaleY(2);
+    opacity: 0;
+    transition: 0.3s;
+  }
+  ul li a:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.3s;
+    z-index: -1;
+  }
+  ul li a:hover {
+    color: #fff;
+  }
+  ul li a:hover:before {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  ul li a:hover:after {
+    transform: scaleY(1);
+    opacity: 1;
+  }
