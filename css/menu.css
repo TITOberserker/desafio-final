@@ -63,3 +63,32 @@ nav{
     transform: scaleY(1);
     opacity: 1;
   }
+
+  @media (max-width:1024px){
+    .toggle-menu{
+    display: none;
+    }
+    
+    .main-menu{
+    flex-direction: column;
+    transform: translateY(-100%);
+        
+    }
+    .main-menu--show{
+    transform: translateY(0%);
+    }
+    }
+    @media(max-width:480px){
+    .toggle-menu{
+    display: block;
+    }
+    .main-menu{
+    flex-direction: column;
+    transform: translateY(-200%);
+        
+    }
+    .main-menu--show{
+        transform: translateY(0%);
+        
+    }
+    }

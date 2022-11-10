@@ -13,8 +13,8 @@ form {
     margin-left: 15% ;
     margin-bottom: 10%;
     width: 70%;
-    height: 400px;
-   
+    height: 600px;
+    
     background-color: rgba(4, 140, 244, 0.759);
     border-radius: 15px
   }
@@ -32,6 +32,9 @@ form {
   label{
      display: inline-block;
     text-align: right;
+    margin-top: 5%;
+    margin-left: 10%;
+
   }
   
   h1, h2{
@@ -44,3 +47,7 @@ form {
   ul li {
     list-style: none;
   }
+input{
+  width: 50% ;
+  
+}
