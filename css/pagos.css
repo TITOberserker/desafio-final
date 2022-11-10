@@ -5,7 +5,9 @@
     box-sizing: border-box;
 }
   
-
+fieldset{
+  text-align: center;
+}
 form {
     margin-top: 10%;
     margin-left: 15% ;
