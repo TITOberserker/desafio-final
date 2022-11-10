@@ -1,5 +1,5 @@
-// function([string1, string2],target id,[color1,color2])    
-consoleText(['ARGENTINA','empresa de viajes H.D'], 'text',['black']);
+
+consoleText(['ARGENTINA','agencia de viajes H.D'], 'text',['black']);
 
 
 function consoleText(words, id, colors) {
